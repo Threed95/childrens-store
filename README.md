@@ -1,2 +1,2 @@
-# childrens-store
+# childrens store
 Товары для детей
