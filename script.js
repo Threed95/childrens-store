@@ -216,3 +216,18 @@ sortControl.addEventListener("change", (event) => {
     }
     renderItems(toys);
 })
+
+const searchInput = document.querySelector("#search-input");
+const searchButton = document.querySelector("#search-btn");
+
+function searchToys() {
+    const searchString = searchInput.value.trim().toLowerCase();
+    toys = items.filter((el) =>
+        el.title.toLowerCase().includes(searchString));
+    toys.sort((a, b) => sortByAlphabet(a, b));
+    sortControl.selectedIndex = 0;
+    renderItems(toys);
+}
+
+searchButton.addEventListener("click", searchToys);
+searchInput.addEventListener("search", searchToys);
