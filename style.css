@@ -4,58 +4,53 @@
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+html {
+    font-size: 20px;
 }
 
-html,
 body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
     height: 100%;
+    background-color: rgb(251, 251, 241);
 }
 
-body {
-    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
 }
 
-main {
-    flex-grow: 1;
+a {
+    text-decoration: none;
+    color: rgb(42, 55, 104);
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .logo {
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
-    font-size: 28px;
+    font-style: italic;
+    font-size: 3rem;
+    font-family: 'Pacifico';
 }
 
 .nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px 0;
 }
 
-.nav a,
-footer a {
-    text-decoration: none;
-    color: inherit;
+nav a:not(:last-child) {
+    margin-right: 20px;
 }
 
-.nav a:hover,
-footer a:hover {
-    color: var(--dark)
-}
-
-.nav input:focus {
-    outline-color: var(--peach);
+.site-search input:focus {
+    outline-color: rgb(101, 213, 133);
     outline-style: solid;
 }
 
 .container {
-    width: 1500px;
+    width: 1450px;
     margin: 0 auto;
     position: relative;
 }
@@ -65,14 +60,13 @@ footer a:hover {
 }
 
 .site-search input {
-    border: 1px solid var(--gray);
+    border: 1px solid black;
     border-radius: 4px 0 0 4px;
 }
 
 .site-search button {
-    background: var(--peach);
-    border: 1px solid var(--gray);
-    -webkit-text-stroke: 1px var(--peach);
+    background: rgb(101, 213, 133);
+    border: 1px solid gray;
     border-radius: 0 4px 4px 0;
     border-left: 0;
 }
@@ -81,7 +75,7 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 15px;
 }
 
 .shop-item {
@@ -105,23 +99,25 @@ footer a:hover {
 
 .shop-item img {
     width: 100%;
-    height: 420px;
+    height: 400px;
     flex-shrink: 3;
     object-fit: cover;
 }
 
 .shop-item h1 {
-    font-size: 20px;
+    font-size: 0.9rem;
     margin-top: 0;
 }
 
 .shop-item p {
-    margin-top: 0;
+    margin-top: 5px;
+    font-size: 0.8rem;
 }
 
 .shop-item .price {
-    background-color: var(--peach);
+    background-color: rgb(101, 213, 133);
     padding: 4px 8px;
+    font-size: 0.8rem;
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
@@ -138,7 +134,7 @@ footer a:hover {
 
 .shop-item .rating {
     cursor: pointer;
-    color: var(--dark);
+    color: rgb(228, 100, 201);
 }
 
 .shop-item .tags {
@@ -150,7 +146,7 @@ footer a:hover {
 }
 
 .shop-item .tag {
-    background: var(--yellow);
+    background: rgb(101, 213, 133);
     border-radius: 4px;
     padding: 4px 8px;
     cursor: pointer;
@@ -158,11 +154,14 @@ footer a:hover {
 
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 1.2rem;
 }
 
 #nothing-found {
-    color: var(--dark);
     position: absolute;
     white-space: nowrap;
     top: 50%;
@@ -176,4 +175,5 @@ footer {
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
+    padding: 15px 0;
 }
