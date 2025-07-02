@@ -188,3 +188,31 @@ function makeCard(shopItem) {
     })
     return item;
 }
+
+const sortControl = document.querySelector("#sort");
+sortControl.addEventListener("change", (event) => {
+    const selectedOption = event.target.value;
+    switch (selectedOption) {
+        case "expensive":
+            {
+                toys.sort((a, b) => b.price - a.price);
+                break;
+            }
+        case "cheap":
+            {
+                toys.sort((a, b) => a.price - b.price);
+                break;
+            }
+        case "rating":
+            {
+                toys.sort((a, b) => a.rating - b.rating);
+                break;
+            }
+        case "alphabet":
+            {
+                toys.sort((a, b) => sortByAlphabet(a, b));
+                break;
+            }
+    }
+    renderItems(toys);
+})
